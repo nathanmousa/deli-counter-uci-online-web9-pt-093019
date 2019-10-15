@@ -9,8 +9,8 @@ def line(katz_deli)
   if katz_deli.length == 0
     puts "The line is currently empty."
   else
-    katz_deli.each_with_index do |name, index|
-    array.push("#{index + 1}. #{name}")
+    katz_deli.each.with_index(1) do |name, index|
+    array.push("#{index}. #{name}")
   end
   puts "The line is currently: #{array.join(" ")}"
   end
